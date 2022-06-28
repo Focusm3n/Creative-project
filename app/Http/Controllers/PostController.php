@@ -10,13 +10,8 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        foreach ($posts as $post) {
-            echo "id = ". "$post->id<br>";
-            echo "Заголовок: $post->title<br>";
-            echo "Контент: $post->content<br>";
-            echo "Сколько лайков? $post->likes<br> ";
-            echo "<br><br>";
-        }
+
+        return view('posts', compact('posts'));
     }
 
     public function create(){
