@@ -10,7 +10,7 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', function (){
     return 'Hello world';
-}); 
+});
 
 
 Route::get('/posts', [PostController::class, 'index'])->name('post.index');
